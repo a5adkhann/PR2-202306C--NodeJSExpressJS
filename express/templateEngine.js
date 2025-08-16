@@ -10,6 +10,13 @@ app.get("/welcome", (req, res) => {
     res.render("main", {info});
 })
 
+app.get("/about", (req, res) => {
+
+    const teams = ["Pakistan", "India", "Australia"];
+
+    res.render("about", {teams});
+})
+
 app.listen(2000, () => {
     console.log("Server started");
 })
